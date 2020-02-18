@@ -2,9 +2,9 @@
   "name": "PROJECT_NAME",
   "version": "1.0.0",
   "description": "PROJECT_NAME makes you happy",
-  "main": "out/index.js",
   "scripts": {
-    "dev": "nodemon",
+    "start": "./bin/www",
+    "dev": "yarn build && nodemon --watch out/ ./bin/www",
     "build": "tsc",
     "watch": "tsc --watch",
     "test": "jest"
@@ -20,11 +20,17 @@
   },
   "homepage": "https://github.com/reergymerej/start-node-typescript#readme",
   "devDependencies": {
+    "@types/express": "^4.17.2",
     "@types/jest": "^25.1.2",
     "@types/node": "^13.7.1",
+    "@types/supertest": "^2.0.8",
     "jest": "^25.1.0",
     "nodemon": "^2.0.2",
+    "supertest": "^4.0.2",
     "ts-jest": "^25.2.0",
     "typescript": "^3.7.5"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
   }
 }
