@@ -6,4 +6,6 @@ module.exports = {
       diagnostics: false,
     },
   },
+  verbose: true,
+  restoreMocks: true,
 }
